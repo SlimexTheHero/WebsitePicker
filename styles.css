@@ -97,6 +97,7 @@ ul {
 li {
     margin-bottom: 8px;
     width: 250px;
+    text-decoration: none;
 }
 
 #devider {

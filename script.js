@@ -107,11 +107,18 @@ window.onload = function () {
     console.log(imageArray.length)
 }
 
-function openVideoLink() {
-    var allLinks = document.getElementById("inputField").value.split(",")
-    allLinks = shuffle(allLinks)
-    window.open(allLinks[0])
-}
+window.addEventListener('keydown', function(event) {
+    switch (event.key) {
+        case 'ArrowLeft':
+            // Call the function for the left image
+            removeLoser('right');
+            break;
+        case 'ArrowRight':
+            // Call the function for the right image
+            removeLoser('left');
+            break;
+    }
+});
 
 //At the start of a new game the initial pictures are loaded
 function startUp() {
@@ -157,6 +164,76 @@ function removeLoser(loser) {
     } document.getElementById("topCounter").innerHTML = `There are ${winnerImages.length} Models left`
     document.getElementById("topCounter").setAttribute("style", "color: white;font-size: 20px;margin-top: 0;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: left")
 }
+
+function newRound() {
+    winnerImages = shuffle(winnerImages);
+    const leftName = winnerImages[0].substring(0, winnerImages[0].length - 4);
+    const rightName = winnerImages[1].substring(0, winnerImages[1].length - 4);
+
+    document.getElementById("leftName").textContent = leftName;
+    document.getElementById("leftImage").src = `./img/${winnerImages[0]}`;
+    document.getElementById("rightName").textContent = rightName;
+    document.getElementById("rightImage").src = `./img/${winnerImages[1]}`;
+}
+
+function displayWinner() {
+    const name = winnerImages[0].substring(0, winnerImages[0].length - 4);
+
+    // Get elements
+    const elementsToRemove = ["leftImage", "rightImage", "leftName", "rightName", "devider"].map(id => document.getElementById(id)).concat(Array.from(document.querySelectorAll(".moreInfo")));
+
+    // Remove elements
+    elementsToRemove.forEach(element => {
+        if (element) {
+            element.remove();
+        }
+    });
+
+    //Display winner
+    const winnerImage = document.getElementById("winnerImage");
+    winnerImage.style.visibility = "visible";
+    winnerImage.style.height = "960px";
+    winnerImage.style.width = "639.75px";
+    winnerImage.style.cursor = "standard";
+    winnerImage.textContent = name;
+    winnerImage.src = `./img/${winnerImages[0]}`;
+    document.getElementById("winnerName").textContent = "Your winner is " + name;
+    document.getElementById("topCounter").textContent = "The losers";
+    document.getElementById("inputWrapper").style.display = "block";
+}
+
+
+function addLoserList(name) {
+    const ul = document.getElementById("loserList");
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.textContent = name;
+    var linkname = name.toLowerCase().replaceAll(" ", "-");
+    a.href = `https://www.pornpics.com/pornstars/${linkname}`; // replace with your actual link
+    a.target = "_blank"; // open link in a new window
+    a.setAttribute("onclick", "window.open(this.href, 'myWindow', 'width=800,height=600'); return false;"); // specify width and height
+    a.style.textDecoration = "none"; // remove underlining
+    a.style.color = "white"; // set font color to white
+    li.appendChild(a);
+    ul.appendChild(li);
+}
+
+function shuffle(array) {
+    let currentIndex = array.length, randomIndex;
+
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+        // Pick a remaining element.
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    }
+    return array;
+}
+
+/*
 // Display new images
 function newRound() {
     winnerImages = shuffle(winnerImages)
@@ -221,4 +298,4 @@ function shuffle(array) {
     return array;
 }
 
-
+*/

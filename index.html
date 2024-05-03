@@ -4,30 +4,29 @@
 <head>
     <title>Image Picker</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="header">
-        <h1>Welcome to the Pornstar Picker</h1>
-    </div>
-    <div class="mainBody">
-        <div class="frame">
+    <header class="header">
+        <h1>Welcome to the Picker</h1>
+    </header>
+    <main class="mainBody">
+        <section class="frame">
             <p id="leftName" onclick="seeMore.call(this)"></p>
             <p class="moreInfo">(Click on the name to see more)</p>
-            <img onclick="removeLoser('right')" id="leftImage" style="height: 800px; width: 500px;">    
-        </div>
-        <div class="frame" >
+            <img onclick="removeLoser('right')" id="leftImage">    
+        </section>
+        <section class="frame">
             <p id="devider">OR</p>
             <p id="winnerName"></p>
-            <img id="winnerImage" onclick="openLink()" style="cursor: pointer;"> 
-        </div>
-        <div class="frame">
+            <img id="winnerImage"> 
+        </section>
+        <section class="frame">
             <p id="rightName" onclick="seeMore.call(this)"></p>
             <p class="moreInfo">(Click on the name to see more)</p>
-            <img onclick="removeLoser('left')" id="rightImage" style="height: 800px; width: 500px;"/>
-        </div>
-        <div class="frame">
+            <img onclick="removeLoser('left')" id="rightImage"/>
+        </section>
+        <section class="frame">
             <div id="listWrapper">
                 <p id="topCounter"></p>
                 <div id="loserListWrapper">
@@ -35,14 +34,8 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="frame">
-            <div id="inputWrapper">
-                <p id="textDecider">If you cant decide, we can do it for you!<br>Paste all links and we will pick one for you.<br>Seperate by comma</p>
-                <textarea name="" id="inputField" cols="80" rows="10"></textarea>
-                <button onclick="openVideoLink()" id="deciderButton">Open link in window</button>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
