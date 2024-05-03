@@ -1,0 +1,111 @@
+.header {
+    width: 100%;
+    height: 150px;
+    background-color: #5E2028;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -45px;
+    line-height: 150px;
+    color: white;
+    font-size: 40px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+p {
+    color: white;
+    font-size: 40px;
+    margin-top: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#leftName {
+    margin-bottom: 10px;
+}
+
+#rightName {
+    margin-bottom: 10px;
+}
+
+.moreInfo {
+    font-size: 15px;
+}
+
+#topCounter {
+    color: white;
+    font-size: 20px;
+    margin-top: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: left;
+    margin-bottom: 10%;
+}
+
+#deciderButton {
+    display: flex;
+    margin-top: 2%;
+}
+
+#inputWrapper {
+    display: none;
+}
+
+#listWrapper {
+    width: 500px;
+    height: fit-content;
+    vertical-align: top;
+}
+
+html, body {
+    margin: 0;
+    margin-top: -11px;
+    padding: 0;
+    vertical-align:top;
+    background-color: #3f3f3f;
+}  
+
+.mainBody {
+    width: 100%;
+    height: max-content;
+    background-color: #3f3f3f;
+    overflow: hidden;
+    text-align: center;
+}
+
+.frame {
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;   
+    margin: 2%;
+    margin-bottom: 1.11%;
+    margin-top: 60px;
+    vertical-align: top;
+}
+
+#textDecider {
+    font-size: 20px;
+}
+
+ul {
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    margin-top: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+li {
+    margin-bottom: 8px;
+    width: 250px;
+}
+
+#devider {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 500px;
+}
+
+#winnerImage {
+    visibility: none;
+}
+
