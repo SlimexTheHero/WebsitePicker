@@ -105,6 +105,9 @@ window.onload = function () {
     startUp()
     console.log(window.location.href)
     document.getElementById("inputField").value = ""
+    startImages.forEach(element => {
+        preLoadImages(imageLink + element)
+    });
 }
 
 window.addEventListener('keydown', function(event) {
@@ -119,6 +122,11 @@ window.addEventListener('keydown', function(event) {
             break;
     }
 });
+
+function preLoadImages(url) {
+    var img=new Image();
+    img.src=url;
+}
 
 //At the start of a new game the initial pictures are loaded
 function startUp() {
