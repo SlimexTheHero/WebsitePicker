@@ -61,7 +61,7 @@ imageArray = [
     'Lauren Phillips.jpg',
     'Leana Lovings.jpg',
     'Lena Paul.jpg',
-    'Lexi Luna.jpg',
+    'Lexi Luna.gif',
     'Lily Lou.jpg',
     'Lily Love.jpg',
     'Mandy Waters.jpg',
