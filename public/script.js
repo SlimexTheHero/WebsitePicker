@@ -1,11 +1,11 @@
 //Get all images
 imageArray = [
-    'Abella Danger.jpg',
+    'Abella Danger.gif',
     'Abigaiil Morris.jpg',
     'Abigail Mac.jpg',
     'Adria Rae.jpg',
     'Adriana Chechik.jpg',
-    'Aidra Fox.jpg',
+    'Aidra Fox.gif',
     'AJ Applegate.jpg',
     'Alena Croft.jpg',
     'Alina Lopez.jpg',
@@ -96,15 +96,15 @@ imageArray = [
     'Violet Starr.jpg',
 ]
 
-var startImages = imageArray
+var startImages = imageArray.map(image => image.replace(/ /g, '+'));
 var winnerImages = startImages
 var loserImages = []
+var imageLink = "https://starpicker.s3.eu-north-1.amazonaws.com/"
 
 window.onload = function () {
     startUp()
     console.log(window.location.href)
     document.getElementById("inputField").value = ""
-    console.log(imageArray.length)
 }
 
 window.addEventListener('keydown', function(event) {
@@ -123,20 +123,21 @@ window.addEventListener('keydown', function(event) {
 //At the start of a new game the initial pictures are loaded
 function startUp() {
     startImages = shuffle(startImages)
-    document.getElementById("leftName").innerHTML = startImages[0].substring(0, startImages[0].length - 4)
+    document.getElementById("leftName").innerHTML = startImages[0].substring(0, startImages[0].length - 4).replaceAll("+", " ")
     document.getElementById("leftName").setAttribute("style", "cursor:pointer")
-    document.getElementById("leftImage").src = `./img/${startImages[0]}`
+    document.getElementById("leftImage").src = imageLink + startImages[0]
     document.getElementById("leftImage").setAttribute("style", "cursor:pointer;height:960px; width:639.75px;")
-    document.getElementById("rightName").innerHTML = startImages[1].substring(0, startImages[1].length - 4)
+    document.getElementById("rightName").innerHTML = startImages[1].substring(0, startImages[1].length - 4).replaceAll("+", " ")
     document.getElementById("rightName").setAttribute("style", "cursor:pointer")
-    document.getElementById("rightImage").src = `./img/${startImages[1]}`
+    document.getElementById("rightImage").src = imageLink + startImages[1]
+    //document.getElementById("rightImage").src = `./img/${startImages[1]}`
     document.getElementById("rightImage").setAttribute("style", "cursor:pointer;height:960px; width:639.75px;")
     document.getElementById("topCounter").innerHTML = `Choose between ${startImages.length} Models`
 }
 
 function seeMore() {
     var name = this.textContent
-    var changedName = name.replaceAll(" ", "-")
+    var changedName = name.replaceAll("+", "-")
     var lowerCaseChangedName = changedName.toLowerCase();
     window.open("https://www.pornpics.com/pornstars/" + lowerCaseChangedName, "myWindows", "width:2560px, height:1440px")
 }
@@ -144,7 +145,7 @@ function seeMore() {
 // Removes the loser and checks if there is only one image left
 function removeLoser(loser) {
     if (loser == "right") {
-        addLoserList(winnerImages[1].substring(0, winnerImages[1].length - 4))
+        addLoserList(winnerImages[1].substring(0, winnerImages[1].length - 4).replaceAll("+", " "))
         winnerImages.splice(1, 1)
         if (winnerImages.length == 1) {
             displayWinner()
@@ -153,7 +154,7 @@ function removeLoser(loser) {
             newRound()
         }
     } else {
-        addLoserList(winnerImages[0].substring(0, winnerImages[0].length - 4))
+        addLoserList(winnerImages[0].substring(0, winnerImages[0].length - 4).replaceAll("+", " "))
         winnerImages.splice(0, 1)
         if (winnerImages.length == 1) {
             displayWinner()
@@ -167,17 +168,17 @@ function removeLoser(loser) {
 
 function newRound() {
     winnerImages = shuffle(winnerImages);
-    const leftName = winnerImages[0].substring(0, winnerImages[0].length - 4);
-    const rightName = winnerImages[1].substring(0, winnerImages[1].length - 4);
+    const leftName = winnerImages[0].substring(0, winnerImages[0].length - 4).replaceAll("+", " ");
+    const rightName = winnerImages[1].substring(0, winnerImages[1].length - 4).replaceAll("+", " ");
 
     document.getElementById("leftName").textContent = leftName;
-    document.getElementById("leftImage").src = `./img/${winnerImages[0]}`;
+    document.getElementById("leftImage").src = imageLink + startImages[0]
     document.getElementById("rightName").textContent = rightName;
-    document.getElementById("rightImage").src = `./img/${winnerImages[1]}`;
+    document.getElementById("rightImage").src = imageLink + startImages[1]
 }
 
 function displayWinner() {
-    const name = winnerImages[0].substring(0, winnerImages[0].length - 4);
+    const name = winnerImages[0].substring(0, winnerImages[0].length - 4).replaceAll("+", " ");
 
     // Get elements
     const elementsToRemove = ["leftImage", "rightImage", "leftName", "rightName", "devider"].map(id => document.getElementById(id)).concat(Array.from(document.querySelectorAll(".moreInfo")));
