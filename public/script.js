@@ -104,13 +104,13 @@ var imageLink = "https://starpicker.s3.eu-north-1.amazonaws.com/"
 window.onload = function () {
     startUp()
     console.log(window.location.href)
-    document.getElementById("inputField").value = ""
     startImages.forEach(element => {
         preLoadImages(imageLink + element)
     });
 }
 
 window.addEventListener('keydown', function(event) {
+    if (winnerImages.length !== 1) {
     switch (event.key) {
         case 'ArrowLeft':
             // Call the function for the left image
@@ -121,6 +121,7 @@ window.addEventListener('keydown', function(event) {
             removeLoser('left');
             break;
     }
+}
 });
 
 function preLoadImages(url) {
@@ -145,7 +146,7 @@ function startUp() {
 
 function seeMore() {
     var name = this.textContent
-    var changedName = name.replaceAll("+", "-")
+    var changedName = name.replaceAll(" ", "-")
     var lowerCaseChangedName = changedName.toLowerCase();
     window.open("https://www.pornpics.com/pornstars/" + lowerCaseChangedName, "myWindows", "width:2560px, height:1440px")
 }
@@ -205,10 +206,9 @@ function displayWinner() {
     winnerImage.style.width = "639.75px";
     winnerImage.style.cursor = "standard";
     winnerImage.textContent = name;
-    winnerImage.src = `./img/${winnerImages[0]}`;
-    document.getElementById("winnerName").textContent = "Your winner is " + name;
-    document.getElementById("topCounter").textContent = "The losers";
-    document.getElementById("inputWrapper").style.display = "block";
+    winnerImage.src = imageLink + winnerImages[0]
+    document.getElementById("winnerName").textContent = "Your winner is: " + name;
+    document.getElementById("topCounter").textContent = "The losers (click on a name to see what you missed):";
 }
 
 
