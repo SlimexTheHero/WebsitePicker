@@ -55,7 +55,7 @@ imageArray = [
     'Kenzie Anne.jpg',
     'Kenzie Reeves.jpg',
     'Kimmy Granger.jpg',
-    'La Sirena.jpg',
+    'La Sirena.gif',
     'Lacy Lennon.jpg',
     'Lana Rhoades.jpg',
     'Lauren Phillips.jpg',
@@ -148,7 +148,7 @@ function seeMore() {
     var name = this.textContent
     var changedName = name.replaceAll(" ", "-")
     var lowerCaseChangedName = changedName.toLowerCase();
-    window.open("https://www.pornpics.com/pornstars/" + lowerCaseChangedName, "myWindows", "width:2560px, height:1440px")
+    window.open("https://www.pornpics.com/pornstars/" + lowerCaseChangedName, "myWindows", "width:800px, height:600px")
 }
 
 // Removes the loser and checks if there is only one image left
