@@ -37,7 +37,7 @@ imageArray = [
     'Emma Magnolia.jpg',
     'Eva Elfie.jpg',
     'Eva Lovia.jpg',
-    'Eva Notty.jpg',
+    'Eva Notty.gif',
     'India Summer.jpg',
     'Indica Flower.jpg',
     'Ivy Lebelle.jpg',
