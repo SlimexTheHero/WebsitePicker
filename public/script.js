@@ -3,7 +3,7 @@ imageArray = [
     'Abella Danger.gif',
     'Abigaiil Morris.jpg',
     'Abigail Mac.jpg',
-    'Adria Rae.jpg',
+    'Adria Rae.gif',
     'Adriana Chechik.jpg',
     'Aidra Fox.gif',
     'AJ Applegate.jpg',
