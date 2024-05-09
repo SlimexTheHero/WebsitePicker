@@ -148,7 +148,7 @@ function seeMore() {
     var name = this.textContent
     var changedName = name.replaceAll(" ", "-")
     var lowerCaseChangedName = changedName.toLowerCase();
-    window.open("https://www.pornpics.com/pornstars/" + lowerCaseChangedName, "myWindows", "width:800px, height:600px")
+    window.open("https://www.pornpics.com/pornstars/" + lowerCaseChangedName, "myWindows", "width=1000,height=800")
 }
 
 // Removes the loser and checks if there is only one image left
@@ -220,7 +220,7 @@ function addLoserList(name) {
     var linkname = name.toLowerCase().replaceAll(" ", "-");
     a.href = `https://www.pornpics.com/pornstars/${linkname}`; // replace with your actual link
     a.target = "_blank"; // open link in a new window
-    a.setAttribute("onclick", "window.open(this.href, 'myWindow', 'width=800,height=600'); return false;"); // specify width and height
+    a.setAttribute("onclick", "window.open(this.href, 'myWindow', 'width=1000,height=800'); return false;"); // specify width and height
     a.style.textDecoration = "none"; // remove underlining
     a.style.color = "white"; // set font color to white
     li.appendChild(a);
