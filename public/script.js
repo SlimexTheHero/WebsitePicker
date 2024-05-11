@@ -73,7 +73,7 @@ imageArray = [
     'Monique Alexander.jpg',
     'Natasha Nice.gif',
     'Nicole Aniston.jpg',
-    'Phoenix Marie.jpg',
+    'Phoenix Marie.gif',
     'Raquel Adan.jpg',
     'Reena Sky.jpg',
     'Remy LaCroix.jpg',
