@@ -9,7 +9,7 @@ imageArray = [
     'AJ Applegate.jpg',
     'Alena Croft.jpg',
     'Alina Lopez.jpg',
-    'Alison Tyler.jpg',
+    'Alison Tyler.gif',
     'Angela White.jpg',
     'Anna Bell Peaks.jpg',
     'Annabel Redd.jpg',
