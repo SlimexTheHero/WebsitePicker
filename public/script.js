@@ -81,7 +81,7 @@ imageArray = [
     'Ryan Keely.jpg',
     'Samantha Saint.jpg',
     'Sheena Ryder.jpg',
-    'Siri Dahl.jpg',
+    'Siri Dahl.gif',
     'Sky Bri.jpg',
     'Skye Blue.jpg',
     'Skyla Novea.jpg',
