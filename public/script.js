@@ -78,7 +78,7 @@ imageArray = [
     'Reena Sky.jpg',
     'Remy LaCroix.jpg',
     'Riley Reid.jpg',
-    'Ryan Keely.jpg',
+    'Ryan Keely.gif',
     'Samantha Saint.jpg',
     'Sheena Ryder.jpg',
     'Siri Dahl.gif',
