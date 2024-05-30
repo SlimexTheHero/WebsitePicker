@@ -67,7 +67,7 @@ imageArray = [
     'Mandy Waters.jpg',
     'Megan Rain.jpg',
     'Melissa Moore.jpg',
-    'Mia Malkova.jpg',
+    'Mia Malkova.gif',
     'Michele James.jpg',
     'Missy Martinez.jpg',
     'Monique Alexander.jpg',
